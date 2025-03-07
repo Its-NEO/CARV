@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://csk2kkpv8qdvr"]
+
+[ext_resource type="Texture2D" uid="uid://dpf4hngsmqq60" path="res://Assets/MainLevelAssets/Lavafall_Animation.png" id="1_cxeby"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1u2wk"]
+atlas = ExtResource("1_cxeby")
+region = Rect2(0, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yn71q"]
+atlas = ExtResource("1_cxeby")
+region = Rect2(16, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m8urb"]
+atlas = ExtResource("1_cxeby")
+region = Rect2(32, 0, 16, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_87vtl"]
+atlas = ExtResource("1_cxeby")
+region = Rect2(48, 0, 16, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w3o26"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1u2wk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yn71q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m8urb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_87vtl")
+}],
+"loop": true,
+"name": &"lava fall",
+"speed": 7.5
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_w3o26")
+animation = &"lava fall"
+frame_progress = 0.730678
